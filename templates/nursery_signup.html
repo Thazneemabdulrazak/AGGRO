@@ -1,0 +1,180 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Sign Up</title>#}
+{#</head>#}
+{##}
+{#<body style="margin: 0";padding="0">#}
+{#<form id="form1" name="form1" method="post" action="/nursery">#}
+{#  <table width="400"  align="center">#}
+{#    <tr>#}
+{#      <td width="150"><label>NurName </label>#}
+{#        &nbsp;</td>#}
+{#      <td width="250"><input type="text" name="txt_name" id="textfield" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Place</td>#}
+{#      <td><label for="textfield4"></label>#}
+{#        <label for="textfield6"></label>#}
+{#        <input type="text" name="txt_place" id="textfield6" required/>#}
+{#<label for="textarea"></label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>City</td>#}
+{#      <td><label for="textfield5"></label>#}
+{#        <label for="textfield2"></label>#}
+{#      <input type="text" name="txt_city" id="textfield2" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Pin</td>#}
+{#      <td><label for="textfield6"></label>#}
+{#      <input type="text" name="txt_pin" id="textfield6" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Post</td>#}
+{#      <td><label for="textfield5"></label>#}
+{#      <input type="text" name="txt_post" id="textfield5" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Email</td>#}
+{#      <td><label for="textfield3"></label>#}
+{#      <input type="text" name="txt_email" id="textfield3" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td><label>PhoneNo</label>#}
+{#        &nbsp;</td>#}
+{#      <td><label for="textfield7"></label>#}
+{#      <input type="text" name="txt_phone" id="textfield8" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td><label> Location</label>&nbsp;</td>#}
+{#      <td><input type="text" name="txt_location" id="textfield2" required/></td>#}
+{#    </tr>#}
+{# <tr>#}
+{#      <td><label> Password</label>&nbsp;</td>#}
+{#      <td><input type="password" name="txt_pass" id="textfield2" required/></td>#}
+{#    </tr>#}
+{#      <tr>#}
+{#      <td><label>Confirm Password</label>&nbsp;</td>#}
+{#      <td><input type="password" name="txt_pass" id="textfield3" required/></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td colspan="2" align="center" height="15"><input type="submit" name="btn_ok" id="btn_ok" value="Sign Up" style="width:100px;height: auto" /></td>#}
+{#    </tr>#}
+{#  </table>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farmers App-SIGN UP</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="/static/signup/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/signup/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/signup/css/tooplate.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <header class="mb-5">
+                    <h3 class="mt-0 white-text">Sign-up</h3>
+                    <p class="grey-text mb-4">Sign up and get your daily updates </p>
+                    <p class="mt-0 white-text" class="grey-text">India is mainly an agricultural country. Agriculture is the most important occupation for most of the Indian rural families. The project focuses on improving productivity in agriculture and providing assistance. Identifying the best suitable crops for their lands. Guidelines for selecting appropriate fertilizer in due intervals.
+                    </p>
+
+                    <img src="/static/wp3708740.jpg" width="140%" height="100%"/>
+
+
+                </header>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                <br>
+                <br>
+                <form id="form1" name="form1" method="post" action="/farmsignup" class="tm-signup-form">
+                    <div class="input-field">
+                        <input placeholder="Nursery Name" id="username" name="name" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Place" id="place" name="place" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="City" id="city" name="city" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Pin" id="pin" name="pin" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input  placeholder="Post" id="post" name="post" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Email" id="email" name="email" type="email" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input pattern="[0-9]{10}" placeholder="Phone" id="phone" name="phone" type="tel" class="validate" required>
+                    </div>
+
+                    <div class="input-field">
+                        <input placeholder="Password" id="password" name="pass" type="password" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Confirm password" id="password2" name="cpass" type="password" class="validate" required>
+                    </div>
+
+                    <script>
+                        var ch= function () {
+
+                            if(document.getElementById("txt_pass").value == document.getElementById("txt_cpass").value) {
+                                return true;
+                            }
+                            else {
+                                alert('Miss Match in password');
+                                return false;
+
+                            }
+
+                        }
+
+                    </script>
+
+
+
+                    <div class="text-right mt-4">
+                        <input type="submit" style="color:#000000" value="SIGNUP" onclick="return ch();"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="row tm-mt-big mb-3">
+            <div class="col-xl-12">
+                <p class="text-center grey-text text-lighten-2 tm-footer-text-small">
+                    Copyright &copy; 2018 Farmer App.All rights reserved.
+
+{#                    - <a rel="nofollow" href="http://www.tooplate.com/view/2105-input">Input</a> by#}
+{#                    <a rel="nofollow" href="http://tooplate.com" class="tm-footer-link">Tooplate</a>#}
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/signup/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/static/signup/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+</html>

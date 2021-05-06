@@ -1,0 +1,42 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Fertiliser Details</h1>
+    <p></p>
+    <p></p>
+
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped
+  ">
+    <tr>
+      <td>NAME</td>
+      <td>PHOTO</td>
+      <td>DETAIL</td>
+      <td COLSPAN=3>HOW TO USE</td>
+
+
+    </tr>
+    {% for i in res %}
+    <tr>
+      <td> {{ i["Name"] }}</td>
+      <td>&nbsp;<img src="{{ i["Photo"] }}" width="100px" height="100px"/></td>
+      <td>&nbsp;{{ i["fdes"] }}</td>
+      <td> {{ i["fuse"] }}</td>
+      <td> <a href="/Editfert/{{ i["fid"] }}"><i class="fa fa-pencil"></i>EDIT</a></td>
+      <td> <a  class="btn btn-danger btn-xs" href="/DeleteFer/{{ i["fid"]}}"   onclick="return confirm('Are you sure you want to delete')">DELETE</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

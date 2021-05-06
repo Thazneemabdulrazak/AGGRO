@@ -1,0 +1,43 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Add Fertiliser</h1>
+    <p></p>
+    <p></p>
+
+<form action="/Add_fertiliser" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table table-striped">
+    <tr>
+      <td >Fertiliser Photo</td>
+      <td><input type="file" name="ph" id="fileField" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <td ><p>Fertiliser Name</p></td>
+      <td><input type="text" name="txt_name" id="textfield" placeholder="Add Fertiliser name" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Fertiliser Desciption</td>
+      <td><textarea name="txt_des" id="txt_des" class="form-control" placeholder="Add description" required></textarea></td>
+    </tr>
+    <tr>
+      <td >Use</td>
+      <td><textarea name="txt_use" id="txt_use" class="form-control" placeholder="Why to use" required ></textarea></td>
+    </tr>
+    <tr>
+
+      <td align="center" colspan="2"><input type="submit" name="btn_sub" id="btn_sub" class="btn btn-primary" value="Submit"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

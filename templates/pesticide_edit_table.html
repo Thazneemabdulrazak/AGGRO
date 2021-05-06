@@ -1,0 +1,51 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Edit Pesticide</h1>
+    <p></p>
+    <p></p>
+
+<form action="/Newpe" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" class="table table-striped ">
+      <tr>
+          <td colspan="2"><img src="{{ Photo }}" width="100" height="100" > </td>
+      </tr>
+    <tr>
+      <td>Name</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="txt_name" id="txt_name" value="{{ name }}" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Photo</td>
+      <td>
+      <input type="file" name="file_photo" id="file_photo" class="form-control"/>{{ Photo }}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><label for="textarea"></label>
+      <textarea name="txt_des" id="txt_des"  class="form-control">{{ Details }}</textarea></td>
+    </tr>
+    <tr>
+      <td>Use</td>
+      <td><label for="txt_use"></label>
+      <textarea name="txt_use" id="textarea3" class="form-control">{{ Puse }}</textarea></td>
+    </tr>
+    <tr>
+
+      <td colspan="2" align="center"><label for="textarea2">
+        <input type="submit" name="btn_sub" id="button" value="Submit" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}
