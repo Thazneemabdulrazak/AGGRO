@@ -1,0 +1,142 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AGRO APP</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Glassy Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+<!-- css files -->
+<link rel="stylesheet" href="/static/Login/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="/static/Login/css/style.css" type="text/css" media="all" /> <!-- Style-CSS -->
+<!-- //css files -->
+<!-- web-fonts -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+
+
+
+
+{%  if status == "no" %}
+    <script>
+    alert('Invalid username or password');
+    </script>
+
+
+{%  endif %}
+
+{%  if status == "noo" %}
+    <script>
+    alert('Password and Confirm Password must be same');
+    </script>
+
+
+{%  endif %}
+
+
+
+		<!--header-->
+		<div class="header-w3l">
+			<h1>Agro App</h1>
+		</div>
+		<!--//header-->
+		<!--main-->
+		<div class="main-w3layouts-agileinfo">
+	           <!--form-stars-here-->
+						<div class="wthree-form">
+							<h2><b><a style="font-size: xx-large;font-size:xx-large;"></a> Sign In</b></h2>
+							<form method="POST" action="/confirmuser">
+								<div class="form-sub-w3">
+									<input type="text" name="txt_usr" placeholder="Username " required />
+								<div class="icon-w3">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								</div>
+								<div class="form-sub-w3">
+									<input type="password" name="txt_pswd" placeholder="Password" required />
+								<div class="icon-w3">
+									<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+								</div>
+								</div>
+								<label class="anim" >
+								<input type="checkbox" class="checkbox">
+									<span>Remember Me</span>
+									<a style="color:white ;font-size: x-large" href="/usersignup">Sign Up</a>
+								</label>
+								<div class="clear"></div>
+								<div class="submit-agileits" >
+									<input type="submit" style="color: whitesmoke;font-family: sans-serif;font-size: x-large" value="Login" id="login" >
+
+								</div>
+								<label class="anim" >
+{#								<input type="checkbox" class="checkbox">#}
+{#									<span>Remember Me</span>#}
+{#									 <a style="color: white;text-align: center" href="/forpas">Forgot Password?</a>#}
+								</label>
+
+							</form>
+<h1 align="center" style="color: #ffffff;font-style: italic;font-family: 'Arial Black'" ></h1>
+						</div>
+				<!--//form-ends-here-->
+
+		</div>
+		<!--//main-->
+		<!--footer-->
+		<div class="footer">
+            <B><p style="color: white;font-size: large">&copy; 2019 Farmers app. All rights reserved | Design by EMPIRE CS</p></B>
+		</div>
+		<!--//footer-->
+</body>
+</html>
+
+
+
+<script src="/static/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+
+
+    $("#loginddd").click(function () {
+        alert("hlooo")
+        uname=$("#txt_usr").val();
+        pass=$("#txt_pswd").val();
+        $.getJSON('/confirmuser1',{
+            txt_usr:uname,txt_pswd:pass
+        },function (data) {
+            status=data["status"]
+            if(status=="admin")
+            {
+                window.location.href="/Home"
+                alert("successfull login")
+
+
+            }
+            if(status=="nu")
+            {
+                 window.location.href="/nuhome"
+                alert("successfull login")
+            }
+            if(status=="no")
+            {
+
+                alert("Invalid username or password")
+            }
+
+        });
+        
+    });
+     });
+</script>

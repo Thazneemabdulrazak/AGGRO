@@ -1,0 +1,41 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> View Pesticides</h1>
+    <p></p>
+    <p></p>
+
+<form id="form1" name="form1" method="post" action="/View_Pesticides_table">
+  <table  width="100%"  class="table table-striped ">
+    <tr align="center">
+      <th align="center">Name</th>
+      <th align="center">Photo</th>
+      <th align="center">Details</th>
+      <th align="center">Usage</th>
+        <th align="center"></th>
+        <th align="center"></th>
+    </tr>
+    {%for i in res %}
+    <tr>
+      <td >{{ i["Name"] }}</td>
+      <td ><img src="{{ i["Photo"] }}" width="100px" height="100px"/> </td>
+      <td >{{ i["Details"] }}</td>
+      <td >{{ i["Puse"] }}</td>
+      <td > <a href="/Editpes/{{i["Pid"]}}"><i class="fa fa-pencil"></i>EDIT</a></td>
+      <td > <a class="btn btn-danger btn-xs" href="/DeletePes/{{ i["Pid"]}}" onclick="return confirm('Are you sure u want to delete')">DELETE</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

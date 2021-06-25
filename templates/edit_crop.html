@@ -1,0 +1,56 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Edit Crop</h1>
+    <p></p>
+    <p></p>
+
+<form action="/Newcr" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+<table  class="table table-striped" >
+    <tr>
+        <td colspan="2" align="center"><img src="{{ Photo }}" width="200" height="200"/> </td>
+    </tr>
+  <tr>
+    <td height="40"><label></label>
+      Choose Image&nbsp;</td>
+    <td><input type="file" name="crop_file" id="fileField" class="form-control"/></td>
+
+  </tr>
+  <tr>
+    <td height="60"><label></label>
+      Crop Name</td>
+    <td><input type="text" name="crop_name" id="textfield" value="{{ Name }} " class="form-control" required/></td>
+
+  </tr>
+  <tr>
+    <td height="110"><label></label>
+      &nbsp;Description</td>
+    <td><textarea name="crop_des" id="textarea" cols="45" rows="5"  class="form-control" required>{{ Description }}</textarea></td>
+
+  </tr>
+
+  <tr>
+    <td colspan="2"
+    align="center"><input type="submit" name="button" class="btn btn-primary" id="button" value="Update" required/></td>
+
+  </tr>
+</table>
+</form>
+    {% if status=="in_des" %}
+        <script>
+        alert("Enter a valid description")
+        </script>
+    {% endif %}
+{% endblock %}
+{#</body>#}
+{#</html>#}

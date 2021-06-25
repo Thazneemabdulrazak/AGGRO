@@ -1,0 +1,35 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> SEND REPLY</h1>
+    <p></p>
+    <p></p>
+
+<form id="form1" name="form1" method="post" action="/Add_notification">
+  <table class="table table-striped">
+      <tr>
+          <td>Complaint</td>
+          <td>{{ reply }}</td>
+      </tr>
+    <tr>
+        <td> Reply</td>
+      <td><textarea name="txt_not" id="txt_not" class="form-control"  cols="45" rows="5" placeholder="Sent your Reply" required></textarea></td>
+    </tr>
+    <tr>
+
+      <td colspan="2" align="center" height="100"><input type="submit" name="btn_send" id="btn_send" value="Send" class="btn btn-primary" onclick="return confirm('Are you want to send this notification')"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

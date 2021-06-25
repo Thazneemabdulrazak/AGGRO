@@ -1,0 +1,43 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Add Pesticides</h1>
+    <p></p>
+    <p></p>
+
+<form action="/Add_pesticide" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table table-striped">
+    <tr>
+      <td >Choose image</td>
+      <td><input type="file" name="fl_name" id="fileField" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <td >Pestcide Name</td>
+      <td><input type="text" name="txt_name" id="textfield2" class="form-control" placeholder="Add pesticide name" required/></td>
+    </tr>
+    <tr>
+      <td >Pesticide Descriptions</td>
+      <td><textarea name="txt_des" id="textarea2" class="form-control" placeholder="Add description" required></textarea></td>
+    </tr>
+    <tr>
+      <td >Use</td>
+      <td><textarea name="txt_use" id="textarea" class="form-control" placeholder="Why to use" required></textarea></td>
+    </tr>
+    <tr>
+
+      <td colspan="2" align="center"><input type="submit" name="button" id="button" value="Submit" class="btn btn-primary"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

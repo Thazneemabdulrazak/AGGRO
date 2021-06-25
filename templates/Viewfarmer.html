@@ -1,0 +1,50 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>View farmer</title>#}
+{#</head>#}
+{% extends "index1.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> View User</h1>
+    <p></p>
+    <p></p>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="100%"  class="table table-striped ">
+    <tr>
+      <th>Frid</th>
+      <th>Name</th>
+      <th>Place</th>
+      <th>City</th>
+      <th>Pin</th>
+      <th>Post</th>
+      <th>Email</th>
+      <th>Phone</th>
+{#        <th>Status</th>#}
+{#        <th></th>#}
+
+    </tr>
+      {% for i in res %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i["Name"] }}</td>
+      <td>&nbsp;{{ i["Place"] }}</td>
+
+        <td>&nbsp;{{ i["City"] }}</td>
+      <td>&nbsp;{{ i["Pin"] }}</td>
+          <td>&nbsp;{{ i["Post"] }}</td>
+      <td>&nbsp;{{ i["Email"] }}</td>
+      <td>&nbsp;{{ i["Phone"] }}</td>
+{#        <td>&nbsp;{{ i[8] }}</td>#}
+
+</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

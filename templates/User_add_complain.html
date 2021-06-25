@@ -1,0 +1,31 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "index2.html" %}
+{% block body %}
+    <p></p>
+    <p></p>
+    <h1> Add Complaint</h1>
+    <p></p>
+    <p></p>
+
+<form id="form1" name="form1" method="post" action="/add_comp">
+  <table width="400" >
+    <tr>
+        <td> Complaint</td>
+      <td width="100"><textarea name="txt_not" id="txt_not" class="form-control"   cols="45" rows="5" placeholder="Add Complaint" required></textarea></td>
+    </tr>
+    <tr>
+        <td></td>
+      <td height="100"><input type="submit" name="btn_send" class="btn btn-primary" id="btn_send" value="Send" onclick="return confirm('Are you want to send this complaint')"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}
