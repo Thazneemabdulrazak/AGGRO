@@ -1,6 +1,7 @@
 from connection import Db as conn
 from flask import Flask, render_template, request, jsonify
 from flask.globals import session
+import read_csv as rs
 app = Flask(__name__)
 app.secret_key = 'jj'
 
@@ -498,9 +499,21 @@ def viewfar():
     return render_template("Viewfarmer.html", res=qwd)
 
 
-
-
-#
+@app.route('/user_check')
+def user_check():
+    return render_template("userdetection.html",my="o")
+@app.route('/detect_post', methods=['POST'])
+def detect_post():
+    temp=request.form["temp"]
+    hum=request.form["hum"]
+    ph = request.form["ph"]
+    rain=request.form["rain"]
+    rf,rsc=rs.random_forest(temp,hum,ph,rain)
+    svm,ss=rs.mysvm(temp,hum,ph,rain)
+    nb,nbs = rs.naive_bayes(temp, hum, ph, rain)
+    nn,ns = rs.nn_cnn(float(temp), float(hum), float(ph), float(rain))
+    return render_template("userdetection.html",my="oc",rf=rf,temp=temp,hum=hum,ph=ph,rain=rain,svm=svm,nb=nb,
+                           nn=nn,ns=ns,rsc=rsc,nbs=nbs)
 @app.route('/ff')
 def famrloginff():
     return "okkkk"

@@ -1,0 +1,64 @@
+{% extends "index2.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/detect_post">
+  <table class="table table-striped">
+  <tr><h1>Detection Page</h1></tr>
+  {% if my =="o" %}
+  <tr>
+    <td>Temperature</td>
+ <td><input required type="text" class="form-control" name="temp"></td>
+  </tr>
+        <tr>
+    <td>Humidiy</td>
+ <td><input required type="text" class="form-control" name="hum"></td>
+  </tr>
+        <tr>
+    <td>Ph</td>
+ <td><input required type="text" class="form-control" name="ph"></td>
+  </tr>
+        <tr>
+    <td>Rainfall</td>
+ <td><input required type="text" class="form-control" name="rain"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" name="button" id="button" value="CHECK" class="btn btn-primary" />
+    </th>
+  </tr>
+      {% else %}
+  <tr>
+      <td><b>Given Temperature</b></td><td><b>{{ temp }}</b></td>
+  </tr>
+       <tr>
+    <td><b>Given Humidity</b></td><td><b>{{ hum }}</b></td>
+  </tr>
+       <tr>
+    <td><b>Given Ph Level</b></td><td><b>{{ ph }}</b></td>
+  </tr> <tr>
+    <td><b>Given Rainfall</b></td><td><b>{{ rain }}</b></td>
+  </tr>
+       <tr>
+    <td><b>Random Forest Predicted this favourable for :</b></td><td><b>{{ rf }}</b></td>
+  </tr>
+       <tr>
+    <td><b>Random Forest Prediction Score :</b></td><td><b>{{ rsc }}</b></td>
+  </tr>
+<tr>
+    <td><b>Naive Bayes Predicted this favourable for :</b></td><td><b>{{ nb }}</b></td>
+  </tr>
+      <tr>
+    <td><b>Naive Bayes Prediction Score :</b></td><td><b>{{ nbs }}</b></td>
+  </tr>
+
+      <tr>
+    <td><b>Neural Network Predicted this favourable for :</b></td><td><b>{{ nn }}</b></td>
+  </tr>
+      <tr>
+    <td><b>Neural Network Prediction Score :</b></td><td><b>{{ ns}}</b></td>
+  </tr>
+      {% endif %}
+</table>
+</form>
+</body>
+{% endblock %}

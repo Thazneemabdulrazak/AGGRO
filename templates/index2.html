@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>AGRO App-ADMIN</title>
+  <title>AGRO App-User</title>
 
   <!-- Favicons -->
   <link href="/static/admin/img/favicon.png" rel="icon">
@@ -258,7 +258,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><img src="/static/admin/img/Fstar-official-logo-2015.png" class="img-circle" width="80"></a></p>
-          <h4 class="centered">ADMIN</h4>
+          <h4 class="centered">USER</h4>
           <li class="mt">
             <a class="active" href="/userviewprofile">
               <i class="fa fa-dashboard"></i>
@@ -305,7 +305,12 @@
               <span>VIEW COMPLAINTS</span>
               </a>
           </li>
-
+ <li class="mt">
+            <a href="/user_check">
+              <i class="fa fa-dashboard"></i>
+              <span>Analysis</span>
+              </a>
+          </li>
             </li>
 
             </li>
@@ -328,9 +333,11 @@
           <!-- **********************************************************************************************************************************************************
               RIGHT SIDEBAR CONTENT
               *********************************************************************************************************************************************************** --><!-- /col-lg-3 -->
+             <p></p>
               {% block body %}
               
               {% endblock %}
+        <p></p>
         </div>
 {#        </div>#}
         </div>
